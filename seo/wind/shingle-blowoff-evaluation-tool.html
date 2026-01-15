@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shingle Blow-Off & Uplift Evaluation Tool — Wind Claim Navigator</title>
+  <meta name="description" content="Evaluate and document shingle blow-off and uplift damage for your insurance claim. Get expert guidance on assessing roof wind damage.">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0F4C81;
+      --primary-dark: #0F172A;
+      --accent: #60A5FA;
+      --success: #10b981;
+      --text-primary: #0B1220;
+      --text-secondary: #64748b;
+      --bg-white: #F8FAFC;
+      --bg-light: #F8FAFC;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 0;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-links a {
+      margin-left: 2rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #0F4C81 0%, #0F172A 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .content-section {
+      padding: 4rem 0;
+    }
+    
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+    }
+    
+    .content-section h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      color: #374151;
+    }
+    
+    .content-section ul {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .content-section li {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: #374151;
+    }
+    
+    .bg-light {
+      background: var(--bg-light);
+    }
+    
+    .cta-section {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    
+    .cta-button-white {
+      background: white;
+      color: var(--primary);
+    }
+    
+    footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1.1rem; }
+      .content-section h2 { font-size: 1.75rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">Wind Claim Navigator</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#pricing">Pricing</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Shingle Blow-Off & Uplift Evaluation Tool</h1>
+      <p>Evaluate and document shingle wind damage with professional assessment techniques to strengthen your insurance claim.</p>
+      <a href="/" class="cta-button">Evaluate Your Shingle Damage</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Understanding Shingle Wind Damage</h2>
+      <p>Shingle blow-off and uplift are among the most common types of wind damage to residential roofs. Understanding the difference between these damage types and properly documenting them is essential for successful insurance claims. Insurance companies scrutinize shingle damage claims carefully, often arguing that damage is from age, improper installation, or lack of maintenance rather than wind.</p>
+      
+      <p>Wind Claim Navigator provides specialized evaluation tools that help you assess shingle damage using the same criteria professional adjusters and roofing contractors use, ensuring your documentation meets insurance company standards.</p>
+
+      <h3>Types of Shingle Wind Damage</h3>
+      <ul>
+        <li><strong>Complete blow-off:</strong> Entire shingles removed from the roof by wind force, exposing underlayment or decking</li>
+        <li><strong>Partial blow-off:</strong> Portions of shingles torn away, leaving remaining material attached</li>
+        <li><strong>Shingle uplift:</strong> Shingles lifted and creased but not completely removed, compromising seal and weather resistance</li>
+        <li><strong>Tab tearing:</strong> Individual shingle tabs torn or separated from the main body</li>
+        <li><strong>Seal failure:</strong> Wind breaks the adhesive seal between shingle layers, allowing future blow-off</li>
+        <li><strong>Granule loss:</strong> Excessive granule removal from wind abrasion or impact</li>
+        <li><strong>Edge lifting:</strong> Shingle edges lifted along rakes, eaves, or ridges</li>
+        <li><strong>Cracking and splitting:</strong> Shingles cracked or split from wind stress</li>
+      </ul>
+
+      <h3>Why Shingle Damage Claims Get Challenged</h3>
+      <p>Insurance companies frequently dispute shingle damage claims by arguing:</p>
+      <ul>
+        <li><strong>Age-related failure:</strong> Claiming shingles failed due to age rather than wind</li>
+        <li><strong>Improper installation:</strong> Suggesting inadequate nailing or sealing caused failure</li>
+        <li><strong>Manufacturing defect:</strong> Arguing damage is from product defects, not wind</li>
+        <li><strong>Thermal damage:</strong> Claiming damage is from heat cycling rather than wind</li>
+        <li><strong>Insufficient wind speeds:</strong> Asserting wind speeds weren't high enough to cause damage</li>
+        <li><strong>Pre-existing condition:</strong> Claiming damage existed before the wind event</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section bg-light">
+    <div class="container">
+      <h2>How to Evaluate Shingle Wind Damage</h2>
+      <p>Proper evaluation of shingle wind damage requires systematic assessment and detailed documentation. Wind Claim Navigator guides you through this process:</p>
+
+      <h3>Step 1: Safety Assessment</h3>
+      <ul>
+        <li>Never climb on a damaged roof without proper safety equipment</li>
+        <li>Use binoculars, zoom cameras, or drones for elevated inspection</li>
+        <li>If safe access is available, inspect from roof edges only</li>
+        <li>Consider professional inspection for steep or high roofs</li>
+      </ul>
+
+      <h3>Step 2: Pattern Recognition</h3>
+      <p>Wind damage typically shows specific patterns that distinguish it from other types of damage:</p>
+      <ul>
+        <li><strong>Directional patterns:</strong> Damage concentrated on windward-facing slopes</li>
+        <li><strong>Edge concentration:</strong> More damage along roof edges, rakes, and ridges where wind forces are highest</li>
+        <li><strong>Corner emphasis:</strong> Increased damage at roof corners where wind creates uplift</li>
+        <li><strong>Random distribution:</strong> Scattered damage across the roof field from turbulent winds</li>
+        <li><strong>Consistent damage type:</strong> Similar damage mechanisms across affected areas</li>
+      </ul>
+
+      <h3>Step 3: Damage Quantification</h3>
+      <p>Document the extent of shingle damage:</p>
+      <ul>
+        <li>Count the number of missing or damaged shingles</li>
+        <li>Measure the total square footage of affected areas</li>
+        <li>Note the percentage of roof area damaged</li>
+        <li>Document damage to multiple roof slopes or sections</li>
+        <li>Identify damage to ridge caps, starter strips, and edge shingles</li>
+      </ul>
+
+      <h3>Step 4: Photographic Documentation</h3>
+      <p>Comprehensive photo documentation is essential:</p>
+      <ul>
+        <li>Photograph the entire roof from ground level (all four sides)</li>
+        <li>Take close-up photos of specific damage areas</li>
+        <li>Capture images showing damage patterns and distribution</li>
+        <li>Photograph exposed underlayment or decking</li>
+        <li>Document any fallen shingles on the ground</li>
+        <li>Take photos from inside the attic showing roof penetration</li>
+        <li>Include reference objects for scale in photos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Document Your Shingle Damage?</h2>
+      <p>Get professional evaluation tools and step-by-step guidance for assessing shingle blow-off and uplift damage.</p>
+      <a href="/" class="cta-button cta-button-white">Use Wind Claim Navigator</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Key Evidence for Shingle Wind Damage Claims</h2>
+      <p>To successfully claim shingle wind damage, you need evidence that proves wind caused the damage:</p>
+
+      <h3>Weather Documentation</h3>
+      <ul>
+        <li>National Weather Service reports showing wind speeds in your area</li>
+        <li>Local weather station data for the date and time of the wind event</li>
+        <li>Storm reports documenting high winds in your region</li>
+        <li>Photographs or videos of the wind event if available</li>
+      </ul>
+
+      <h3>Physical Evidence</h3>
+      <ul>
+        <li>Fallen shingles collected from your property</li>
+        <li>Photos showing nail holes in blown-off shingles (proving proper attachment)</li>
+        <li>Documentation of damage patterns consistent with wind</li>
+        <li>Evidence of similar damage to neighboring properties</li>
+      </ul>
+
+      <h3>Professional Assessment</h3>
+      <ul>
+        <li>Contractor inspection reports attributing damage to wind</li>
+        <li>Engineering evaluations for severe or disputed damage</li>
+        <li>Repair estimates from licensed roofing contractors</li>
+        <li>Expert opinions on wind speeds required to cause observed damage</li>
+      </ul>
+
+      <h3>How Wind Claim Navigator Helps</h3>
+      <p>Wind Claim Navigator provides specialized tools for shingle damage evaluation:</p>
+      <ul>
+        <li><strong>Damage assessment checklists:</strong> Systematic evaluation of all shingle damage types</li>
+        <li><strong>Photo documentation guides:</strong> Instructions on capturing evidence that insurers accept</li>
+        <li><strong>Pattern recognition tools:</strong> Identify wind damage patterns vs. other damage types</li>
+        <li><strong>Quantification calculators:</strong> Measure and report damage extent accurately</li>
+        <li><strong>Evidence organization:</strong> Compile all documentation into comprehensive claim packages</li>
+        <li><strong>Appeal resources:</strong> Tools for challenging denials of shingle damage claims</li>
+      </ul>
+      
+      <p><a href="/" style="color: var(--primary); font-weight: 600;">Get started with Wind Claim Navigator</a> to access professional shingle damage evaluation tools and maximize your roof wind damage claim.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wind Claim Navigator. <a href="/">Return to Home</a></p>
+    </div>
+  </footer>
+</body>
+</html>

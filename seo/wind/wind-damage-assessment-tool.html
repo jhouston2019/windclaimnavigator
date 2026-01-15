@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind Damage Assessment Tool — Wind Claim Navigator</title>
+  <meta name="description" content="Assess and document wind damage to your property with expert guidance. Identify all damage, create comprehensive reports, and strengthen your insurance claim.">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0F4C81;
+      --primary-dark: #0F172A;
+      --accent: #60A5FA;
+      --success: #10b981;
+      --text-primary: #0B1220;
+      --text-secondary: #64748b;
+      --bg-white: #F8FAFC;
+      --bg-light: #F8FAFC;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 0;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-links a {
+      margin-left: 2rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #0F4C81 0%, #0F172A 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .content-section {
+      padding: 4rem 0;
+    }
+    
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+    }
+    
+    .content-section h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      color: #374151;
+    }
+    
+    .content-section ul {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .content-section li {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: #374151;
+    }
+    
+    .bg-light {
+      background: var(--bg-light);
+    }
+    
+    .cta-section {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    
+    .cta-button-white {
+      background: white;
+      color: var(--primary);
+    }
+    
+    footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1.1rem; }
+      .content-section h2 { font-size: 1.75rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">Wind Claim Navigator</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#pricing">Pricing</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Wind Damage Assessment Tool</h1>
+      <p>Systematically assess and document all wind damage to your property with professional-grade evaluation tools.</p>
+      <a href="/" class="cta-button">Start Your Wind Damage Assessment</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Professional Wind Damage Assessment</h2>
+      <p>Properly assessing wind damage is the foundation of a successful insurance claim. Missing damage or failing to document it correctly can result in denied claims or settlements that don't cover full repair costs. Wind Claim Navigator provides systematic assessment tools that help you identify, document, and report all wind damage to your property.</p>
+      
+      <p>Our wind damage assessment approach is based on industry standards used by professional adjusters and contractors, ensuring you capture the same level of detail that insurance companies expect.</p>
+
+      <h3>Why Comprehensive Assessment Matters</h3>
+      <ul>
+        <li><strong>Hidden damage:</strong> Wind damage isn't always visible from the ground; systematic assessment reveals all affected areas</li>
+        <li><strong>Consequential damage:</strong> Wind often causes secondary damage that must be documented for full coverage</li>
+        <li><strong>Claim completeness:</strong> Supplemental claims for missed damage are harder to get approved</li>
+        <li><strong>Settlement accuracy:</strong> Complete assessment ensures repair estimates cover all necessary work</li>
+        <li><strong>Denial prevention:</strong> Thorough documentation prevents insurers from claiming insufficient evidence</li>
+      </ul>
+
+      <h3>What Wind Damage Assessment Includes</h3>
+      <p>A comprehensive wind damage assessment evaluates all property components:</p>
+      <ul>
+        <li><strong>Roof system:</strong> Shingles, flashing, ridge caps, vents, and structural components</li>
+        <li><strong>Exterior walls:</strong> Siding, trim, soffit, fascia, and wall structure</li>
+        <li><strong>Windows and doors:</strong> Glass, frames, screens, and seals</li>
+        <li><strong>Gutters and downspouts:</strong> Attachment, integrity, and functionality</li>
+        <li><strong>Fences and gates:</strong> Posts, panels, and hardware</li>
+        <li><strong>Detached structures:</strong> Garages, sheds, carports, and pergolas</li>
+        <li><strong>Trees and landscaping:</strong> Damage to or from vegetation</li>
+        <li><strong>Interior damage:</strong> Water intrusion, ceiling damage, and related issues</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section bg-light">
+    <div class="container">
+      <h2>How to Conduct a Wind Damage Assessment</h2>
+      <p>Wind Claim Navigator guides you through a systematic assessment process:</p>
+
+      <h3>Step 1: Safety First</h3>
+      <p>Before beginning your assessment:</p>
+      <ul>
+        <li>Ensure the property is safe to inspect (no downed power lines, structural instability)</li>
+        <li>Don't climb on damaged roofs or structures</li>
+        <li>Use binoculars or zoom cameras for elevated areas</li>
+        <li>Document hazards and emergency conditions first</li>
+      </ul>
+
+      <h3>Step 2: Exterior Assessment</h3>
+      <p>Systematically inspect all exterior components:</p>
+      <ul>
+        <li>Walk the perimeter of your property, photographing from all angles</li>
+        <li>Document each elevation (front, back, sides) separately</li>
+        <li>Look for missing, damaged, or displaced materials</li>
+        <li>Note any exposed underlayment or structural components</li>
+        <li>Photograph damage from multiple distances (wide shots and close-ups)</li>
+        <li>Document the extent and pattern of damage</li>
+      </ul>
+
+      <h3>Step 3: Interior Assessment</h3>
+      <p>Check for interior damage resulting from wind:</p>
+      <ul>
+        <li>Look for water stains on ceilings and walls</li>
+        <li>Check attic spaces for roof penetration and water intrusion</li>
+        <li>Document any interior damage to contents or finishes</li>
+        <li>Note the relationship between exterior damage and interior effects</li>
+      </ul>
+
+      <h3>Step 4: Documentation</h3>
+      <p>Create comprehensive records of all damage:</p>
+      <ul>
+        <li>Take photos and videos with timestamps</li>
+        <li>Create a written inventory of all damaged items and areas</li>
+        <li>Measure and note the extent of damage (square footage, linear footage)</li>
+        <li>Collect any fallen materials as physical evidence</li>
+        <li>Obtain weather reports documenting wind speeds</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Assess Your Wind Damage?</h2>
+      <p>Get professional assessment tools and step-by-step guidance to document all damage comprehensively.</p>
+      <a href="/" class="cta-button cta-button-white">Get Wind Claim Help</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>How Wind Claim Navigator Helps With Assessment</h2>
+      <p>Wind Claim Navigator provides specialized tools for wind damage assessment:</p>
+      <ul>
+        <li><strong>Assessment checklists:</strong> Room-by-room and component-by-component evaluation guides</li>
+        <li><strong>Photo documentation guides:</strong> Instructions on what to photograph and from what angles</li>
+        <li><strong>Damage categorization:</strong> Tools to classify damage types and severity</li>
+        <li><strong>Evidence organization:</strong> Systems to organize photos, videos, and documentation</li>
+        <li><strong>Report generation:</strong> Create professional damage reports for your insurer</li>
+        <li><strong>Professional standards:</strong> Assessment protocols based on industry best practices</li>
+      </ul>
+
+      <h3>When to Get Professional Assessment</h3>
+      <p>While Wind Claim Navigator helps you conduct thorough self-assessment, professional evaluation is recommended for:</p>
+      <ul>
+        <li>Extensive or severe damage</li>
+        <li>Structural concerns or safety issues</li>
+        <li>Hidden damage that requires specialized equipment to detect</li>
+        <li>Disputed claims where expert opinions strengthen your case</li>
+        <li>Complex damage involving multiple systems or components</li>
+      </ul>
+      
+      <p>Wind Claim Navigator helps you understand when professional assessment adds value and how to incorporate professional reports into your claim.</p>
+      
+      <p><a href="/" style="color: var(--primary); font-weight: 600;">Get started with Wind Claim Navigator</a> to access comprehensive wind damage assessment tools and maximize your insurance claim.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wind Claim Navigator. <a href="/">Return to Home</a></p>
+    </div>
+  </footer>
+</body>
+</html>
